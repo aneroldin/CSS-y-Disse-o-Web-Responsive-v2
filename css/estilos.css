@@ -1,0 +1,105 @@
+@font-face {
+  font-family: DancingScript-Regular;
+  src: url("DancingScript-Regular.otf");
+}
+body{
+  background-color:  #02010a;
+  font-family: DancingScript-Regular;
+}
+#contenedor{
+    margin: 0 auto;
+    position: relative;
+              top: 1px;
+
+    animation: anmContenedor 1s;
+
+}
+    @-webkit-keyframes anmContenedor{
+        0% {top:  800px}
+        100%{top: 1px}
+    }
+
+    #cabecera{
+      background: #5b7989;
+
+    }
+    #cabeceratit{
+      margin: 5px;
+      color: white;
+      text-shadow:#02010a 2px 2px;
+    }
+    #cabeceramenu li{
+      display: inline-flex;
+    }
+    #cabeceramenu a{
+      color: white;
+    }
+
+    #principal{
+      background: #82c3a6;
+      width: 100%;
+      margin:auto;
+      text-align: center;
+    }
+
+    #principal img{
+        width: 80%;
+    }
+    #secundario{
+      background: #d5c75f;
+    }
+
+  @media (min-width: 900px ){
+      #contenedor{
+          margin: auto;
+          width: 900px;
+      }
+        #cabecera{
+          width: 100%;
+          display: inline-flex;
+        }
+              #cabeceratit{  width: 70%;      }
+              #cabeceramenu{
+                width: 30%;
+                margin:auto;
+                display: inline-flex;
+              }
+       #secundario{
+         width: 100%;
+          display: inline-flex;
+       }
+       #secundario div{
+         width: 50%;
+         margin: auto;
+         text-align: center;
+
+       }
+       #secundario img{
+         width: 70%;
+         padding: 5px;
+         height: 200px;
+       }
+
+  }
+
+  @media (max-width: 900px){
+    #contenedor{
+      width: 100%;
+    }
+    #secundario{
+      width: 100%;
+      display: block;
+    }
+
+    #secundario div{
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+    #secundario img{
+      width: 70%;
+      padding: 5px;
+      height: 200px;
+    }
+
+  }
