@@ -6,7 +6,7 @@ body{
   background-color:  #02010a;
   font-family: DancingScript-Regular;
 }
-#contenedor{
+#contenido{
     margin: 0 auto;
     position: relative;
               top: 1px;
@@ -18,7 +18,9 @@ body{
         0% {top:  800px}
         100%{top: 1px}
     }
-
+#contenido img{
+  box-shadow: 2px 2px #02010a;
+}
     #cabecera{
       background: #5b7989;
 
@@ -48,9 +50,25 @@ body{
     #secundario{
       background: #d5c75f;
     }
+    #secundario1 img:hover{
+      transform: rotate(10deg);
+      border: 2px;
+      box-shadow: 4px 4px 20px  #82c3a6;
+    }
+    #secundario2 img:hover{
+      transform: translate(5px,-20px);
+      border: 2px;
+      box-shadow: 4px 4px 20px #82c3a6;
+    }
+    #pie{
+      background-color:  #C6d5c5;
+      border: solid white;
+      border-bottom-left-radius:  10px ;
+      border-bottom-right-radius:  10px ;
+    }
 
   @media (min-width: 900px ){
-      #contenedor{
+      #contenido{
           margin: auto;
           width: 900px;
       }
@@ -79,11 +97,22 @@ body{
          padding: 5px;
          height: 200px;
        }
+       #pie{
+         width: 100%;
+         display: inline-flex;
+       }
+       #pie div{
+         width: 25%;
+         margin: 10px;
+       }
+       #pie img{
+         width: 15px;
+       }
 
   }
 
   @media (max-width: 900px){
-    #contenedor{
+    #contenido{
       width: 100%;
     }
     #secundario{
@@ -101,5 +130,16 @@ body{
       padding: 5px;
       height: 200px;
     }
+    #pie{
+      width: 100%;
+      display: block;
+    }
 
+    #pie div{
+      width: 100%;
+      margin: 10px;
+    }
+    #pie img{
+      width: 15px;
+    }
   }
