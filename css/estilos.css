@@ -53,21 +53,34 @@ body{
     #secundario1 img:hover{
       transform: rotate(10deg);
       border: 2px;
+      transition: 0.5s;
       box-shadow: 4px 4px 20px  #82c3a6;
     }
     #secundario2 img:hover{
+      transition: 0.5s;
       transform: translate(5px,-20px);
       border: 2px;
       box-shadow: 4px 4px 20px #82c3a6;
     }
     #pie{
       background-color:  #C6d5c5;
-      border: solid white;
       border-bottom-left-radius:  10px ;
       border-bottom-right-radius:  10px ;
     }
 
-  @media (min-width: 900px ){
+    .imagen1{
+      -webkit-filter: blur(10px);
+      filter:blur(10px);
+    }
+    .imagen2,.imagen4,.imagen6{
+      -webkit-filter: grayscale(100%);
+      filter:grayscale(100%);
+    }
+    .imagen3{
+      -webkit-filter: sepia(90%);
+      filter:sepia(90%);
+    }
+@media (min-width: 900px ){
       #contenido{
           margin: auto;
           width: 900px;
@@ -109,15 +122,55 @@ body{
          width: 15px;
        }
 
+       .galeria{
+         width: 100%;
+         display: inline-flex;
+         margin: auto;
+       }
+       .galerias{
+         width: 33.3%;
+
+       }
+       .divimagen{
+
+         padding: 15px;
+       }
+       .divimagen img{
+         width: 100%;
+         height: 180px;
+
+       }
+
+
+
+
+       .divimagen img{
+         width: 100%;
+       }
+
   }
 
-  @media (max-width: 900px){
+@media (max-width: 900px){
     #contenido{
       width: 100%;
     }
+    #cabeceratit{
+      width: 100%;
+      text-align: center;
+    }
+    #cabeceramenu{
+      width: 100%;
+      text-align: center;
+    }
+    #principal{
+      width: 100%;
+    }
+    #principal img{
+      width: 100%;
+      height: 200px;
+    }
     #secundario{
       width: 100%;
-      display: block;
     }
 
     #secundario div{
@@ -125,10 +178,11 @@ body{
       margin: auto;
       text-align: center;
     }
+
     #secundario img{
-      width: 70%;
-      padding: 5px;
+      width: 80%;
       height: 200px;
+
     }
     #pie{
       width: 100%;
@@ -141,5 +195,14 @@ body{
     }
     #pie img{
       width: 15px;
-    }
   }
+  .galeria{ width: 100%;
+        margin: auto;
+  }
+  .galerias{width: 100%;  }
+  .divimagen{ padding: 15px; }
+  .divimagen img{
+    width: 100%;
+    height: 180px;
+  }
+}
